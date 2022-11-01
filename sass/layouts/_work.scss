@@ -1,0 +1,41 @@
+.work__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+.icon-antenna,
+.icon-clock,
+.icon-diagram,
+.icon-astronaut {
+	width: 70px;
+	height: 70px;
+}
+
+.icon-svg {
+	/* display: block;
+  content: "";
+  width: 270px; */
+	height: 120px;
+	background-color: #f5f4fa;
+	border-radius: 4px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-bottom: 30px;
+	@extend %aligner;
+	justify-content: center;
+}
+
+.work__title {
+	font-size: 14px;
+	line-height: calc(16 / 14);
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.work__text {
+	line-height: calc(24 / 14);
+	color: var(--second-color);
+	width: 270px;
+}
