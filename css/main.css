@@ -66,6 +66,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  width: 100%;
 }
 
 /* Свойства для обнуления курсива у address */
@@ -82,14 +83,29 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 }
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .backdrop {
@@ -546,8 +562,8 @@ body {
   background: #f5f4fa;
 }
 .team-list {
-  display: flex;
-  justify-content: space-between;
+  gap: 30px;
+  flex: wrap;
 }
 .team-item {
   background: var(--main-color);
@@ -575,10 +591,10 @@ body {
 }
 
 .team__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 1.1785714286;
   text-align: center;
-  font-size: 36px;
-  line-height: 1.1666666667;
 }
 
 .team-soc-list {
