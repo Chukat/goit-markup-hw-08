@@ -1,47 +1,93 @@
+.hero__title {
+	font-weight: 900;
+	font-size: 26px;
+	line-height: 1.62;
+	text-align: center;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--main-title-color);
+	margin: 0 auto 30px;
+
+	@media screen and (min-width: 480px) {
+		width: 360px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: 696px;
+		font-size: 44px;
+		line-height: 1.36;
+	}
+}
 .hero {
 	background-color: #2f303a;
-	background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/office.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+	padding: 118px 0;
 	max-width: 1600px;
-	font-family: var(--second-font);
-	padding-bottom: 200px;
-	padding-top: 200px;
+	height: 400px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 	margin: 0 auto;
-	text-align: center;
 
-	&__title {
-		display: flex;
-		@include font(900, 44px, calc(60 / 44), 0.06em);
-
-		// font-weight: 900;
-		// font-size: 44px;
-		// line-height: calc(60 / 44);
-		text-align: center;
-		// letter-spacing: 0.06em;
-		text-transform: uppercase;
-		width: 696px;
-		justify-content: center;
-		margin-bottom: 30px;
-		margin-left: auto;
-		margin-right: auto;
-		color: var(--main-color);
+	@media screen and (min-width: 1200px) {
+		padding: 200px 0;
+		height: 600px;
 	}
+}
 
-	&__btn {
-		cursor: pointer;
-		@include font(700, 16px, calc(30 / 16), 0.06em);
-
-		// font-weight: 700;
-		// font-size: 16px;
-		// line-height: calc(30 / 16);
-		// letter-spacing: 0.06em;
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-		border-radius: 4px;
-		padding: 10px 32px;
-		border: 0;
-		color: var(--main-color);
-		background-color: var(--accent-color);
+@media screen and (max-width: 767px) {
+	.hero {
+		background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url(../images/hero/office-mobile.jpg);
 	}
+	@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+		.hero {
+			background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+				url(../images/hero/office-mobile@2x.jpg);
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.hero {
+		background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url(../images/hero/office-tablet.jpg);
+	}
+	@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+		.hero {
+			background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+				url(../images/hero/office-tablet@2x.jpg);
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.hero {
+		background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url(../images/hero/office-desktop.jpg);
+	}
+	@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+		.hero {
+			background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+				url(../images/hero/office-desktop@2x.jpg);
+		}
+	}
+}
+
+.hero__btn {
+	display: block;
+	margin: 0 auto;
+	min-width: 200px;
+	height: 50px;
+	color: var(--main-title-color);
+	background-color: var(--accent-color);
+	font-family: inherit;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.9;
+	letter-spacing: 0.06em;
+	border: 1px solid var(--accent-color);
+	border-radius: 4px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	cursor: pointer;
+	align-items: center;
 }
